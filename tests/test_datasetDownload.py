@@ -30,7 +30,7 @@ class Test_Dataset(dataset_page):
 		URL_LOGIN = 'https://aiclub.world/login'
 		self.driver.get(URL_LOGIN)
 		username = 'sgangap2018@gmail.com'
-		password = 'New@pw11'
+		password = 'Being@T/here3'
 
 		# login to AiClub site
 		login_cred = self.driver.find_element_by_xpath("//input[@id='email']")
@@ -49,7 +49,7 @@ class Test_Dataset(dataset_page):
 		self.driver.get(URL_DATASET.format(s=ids))
 		self.download_file()
 		try:
-			self.check_download(column_headers)
+			self.verify_download(column_headers)
 		except:
 			print('*.csv file not found')
 
