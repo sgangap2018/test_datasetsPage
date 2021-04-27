@@ -9,12 +9,16 @@ def get_args():
 	read_file = open("test_data/data_file.json", "r")
 	df = pd.read_json(read_file)
 	for column_name, item in df.iteritems():
-		dataset_id = column_name
-		column_headers = item['info']['columnNames']
-		IDS.append(dataset_id)
-		COLUMNS.append(column_headers)
+		if item['dataType'] == 'image':
+			continue
+		else:
+			dataset_id = column_name
+			column_headers = item['info']['columnNames']
+			IDS.append(dataset_id)
+			COLUMNS.append(column_headers)
 	DATA = zip(IDS, COLUMNS)
 	return DATA
+
 
 
 
