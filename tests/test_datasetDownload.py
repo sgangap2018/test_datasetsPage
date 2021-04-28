@@ -20,8 +20,9 @@ class Test_Dataset_Download(dataset_page):
 	def test_login(self):
 		URL_LOGIN = 'https://aiclub.world/login'
 		self.driver.get(URL_LOGIN)
-		username = 'sgangap2018@gmail.com'
-		password = 'Being@T/here3'
+		#Enter username/password for AIClub
+		username = ''
+		password = ''
 
 		# login to AiClub site
 		login_cred = self.driver.find_element(*locators.USERNAME)
